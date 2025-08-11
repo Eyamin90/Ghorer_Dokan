@@ -1,0 +1,1657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghorer Dokan - Buy Best Products Online</title>
+    <meta name="description" content="Ghorer Dokan - আপনার ঘরের জন্য সেরা পণ্য, দ্রুত ডেলিভারি ও দারুণ অফার! Inspired by Amazon.">
+    <meta name="keywords" content="Ghorer Dokan, ecommerce, online shop, electronics, home, kitchen, fashion, books, toys, amazon inspired">
+    <meta name="author" content="Ghorer Dokan Team">
+    <meta property="og:title" content="Ghorer Dokan - Buy Best Products Online">
+    <meta property="og:description" content="আপনার ঘরের জন্য সেরা পণ্য, দ্রুত ডেলিভারি ও দারুণ অফার!">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ghorer Dokan">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: url('https://leonardo.ai/wp-content/uploads/2024/06/bg-grid-hero-m.svg') repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        .header {
+            background: #131921;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 12px 32px;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff9900;
+            letter-spacing: 1px;
+        }
+        .search-bar {
+            flex: 1;
+            margin: 0 24px;
+            display: flex;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+        .search-bar button {
+            padding: 8px 16px;
+            border: none;
+            background: #febd69;
+            color: #111;
+            font-weight: bold;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .nav {
+            display: flex;
+            gap: 18px;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #febd69;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat, linear-gradient(90deg, #232f3e 60%, #131921 100%);
+            color: #fff;
+            padding: 48px 32px 32px 32px;
+            text-align: center;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; right: 0; bottom: 0;
+            background: rgba(35,47,62,0.7);
+            z-index: 1;
+        }
+        .hero > * {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+            padding: 32px;
+        }
+        .product {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+            padding: 20px 16px 24px 16px;
+            text-align: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            }
+            .quick-view-btn {
+                display: none;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: #232f3e;
+                color: #ff9900;
+                border: none;
+                padding: 8px 18px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 1rem;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+                cursor: pointer;
+                z-index: 3;
+                opacity: 0.95;
+            }
+            .product:hover .quick-view-btn {
+                display: block;
+            }
+        }
+        .product::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0; right: 0; bottom: 0;
+            background: linear-gradient(120deg, #ffecd2 0%, #fcb69f 100%);
+            opacity: 0;
+            z-index: 0;
+            transition: opacity 0.3s;
+        }
+        .product:hover {
+            box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+            transform: translateY(-8px) scale(1.04);
+        }
+        .product:hover::before {
+            opacity: 0.13;
+        }
+        .product img {
+            max-width: 100%;
+            height: 140px;
+            object-fit: contain;
+            margin-bottom: 12px;
+            transition: transform 0.2s;
+            cursor: zoom-in;
+        }
+        .product img:hover {
+            transform: scale(1.25);
+            z-index: 2;
+        }
+        .product-title {
+            font-size: 1.15rem;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #232f3e;
+        }
+        .product-price {
+            color: #b12704;
+            font-size: 1.13rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .product button {
+            background: linear-gradient(90deg, #ffd814 60%, #febd69 100%);
+            border: none;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-size: 1rem;
+            margin-top: 8px;
+        }
+        .product button:hover {
+            background: #f7ca00;
+            color: #232f3e;
+        }
+        .footer {
+            background: #232f3e;
+            color: #fff;
+            text-align: center;
+            padding: 18px 0 0 0;
+            margin-top: 32px;
+        }
+        .newsletter {
+            margin: 0 auto 18px auto;
+            max-width: 400px;
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+        }
+        .newsletter input {
+            padding: 8px;
+            border-radius: 4px 0 0 4px;
+            border: none;
+            width: 70%;
+        }
+        .newsletter button {
+            padding: 8px 16px;
+            border: none;
+            background: #ff9900;
+            color: #232f3e;
+            font-weight: bold;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .product-rating {
+            color: #ff9900;
+            margin-bottom: 8px;
+        }
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin: 32px 0 0 0;
+            flex-wrap: wrap;
+        }
+        .category {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 18px 32px;
+            text-align: center;
+            min-width: 140px;
+            font-weight: bold;
+            color: #232f3e;
+            transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+            cursor: pointer;
+        }
+        .category.active, .category:active {
+            background: #febd69;
+            color: #131921;
+        }
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+            background: #232f3e;
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, bottom 0.3s;
+        }
+        .toast.show {
+            opacity: 1;
+            bottom: 80px;
+            pointer-events: auto;
+        }
+        .category:hover {
+            background: #febd69;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+        }
+        .nav a.cart {
+            display: flex;
+            align-items: center;
+        }
+        .cart-badge {
+            background: #ff9900;
+            color: #111;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            padding: 2px 7px;
+            margin-left: 4px;
+            font-weight: bold;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-left: 16px;
+        }
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: #fff;
+            margin: 4px 0;
+            border-radius: 2px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #fff;
+            border-radius: 8px;
+            padding: 32px;
+            max-width: 400px;
+            text-align: center;
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            font-size: 1.5rem;
+            color: #232f3e;
+            cursor: pointer;
+        }
+        @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+        @media (max-width: 600px) {
+            .header, .hero, .products {
+                padding: 12px;
+            }
+            .search-bar {
+                margin: 0 8px;
+            }
+            .categories {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .nav {
+                display: none;
+                position: absolute;
+                top: 56px;
+                right: 0;
+                background: #131921;
+                flex-direction: column;
+                width: 160px;
+                padding: 12px 0;
+                z-index: 100;
+            }
+            .nav.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header" role="banner">
+        <div style="display:flex;align-items:center;gap:12px;">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#fff;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.10);">
+              <rect x="6" y="18" width="28" height="16" rx="4" fill="#ff9900"/>
+              <polygon points="20,6 4,20 36,20" fill="#232f3e"/>
+              <rect x="16" y="26" width="8" height="8" rx="2" fill="#fff"/>
+              <text x="20" y="36" text-anchor="middle" font-size="8" fill="#232f3e" font-family="Arial, sans-serif">GD</text>
+            </svg>
+            <div class="logo" tabindex="0" aria-label="Ghorer Dokan Home">Ghorer Dokan</div>
+          </div>
+        <form class="search-bar" onsubmit="return false;" role="search" aria-label="Product Search">
+            <input type="text" id="searchInput" placeholder="Search products..." oninput="searchProducts()" aria-label="Search products">
+            <button type="submit" aria-label="Search">Search</button>
+        </form>
+        <nav class="nav" id="mainNav" role="navigation" aria-label="Main Navigation">
+            <a href="#" aria-label="Home">Home</a>
+            <a href="#" aria-label="Deals">Deals</a>
+            <a href="#" aria-label="Orders" onclick="openOrderTrackingModal(event)">Orders</a>
+    <!-- Order Tracking Modal -->
+    <div class="modal" id="orderModal" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeOrderTrackingModal()" aria-label="Close Orders">&times;</span>
+            <h2 style="color:#232f3e;">অর্ডার ট্র্যাকিং</h2>
+            <form onsubmit="trackOrder(event)">
+                <input type="text" id="orderIdInput" placeholder="অর্ডার আইডি দিন" required style="margin-bottom:8px;width:90%;padding:8px;">
+                <button type="submit" style="background:#ff9900;color:#232f3e;border:none;padding:8px 22px;border-radius:6px;font-weight:bold;">ট্র্যাক করুন</button>
+            </form>
+            <div id="orderStatus" style="margin-top:12px;color:#232f3e;"></div>
+        </div>
+    </div>
+            <a href="#" class="cart" id="cartBtn" aria-label="Cart" onclick="openCartModal(event)">Cart <span class="cart-badge" id="cartCount">0</span></a>
+            <a href="#" aria-label="Account" onclick="openAccountModal(event)">Account</a>
+            <a href="#" aria-label="Wishlist" onclick="openWishlistModal(event)">Wishlist <span class="cart-badge" id="wishlistCount">0</span></a>
+        </nav>
+        <select id="langSwitcher" onchange="switchLang()" style="margin-left:10px;padding:4px 8px;border-radius:4px;">
+            <option value="en">EN</option>
+            <option value="bn">BN</option>
+        </select>
+    <button id="notifyBtn" onclick="showNotification()" style="background:#ff9900;color:#232f3e;border:none;padding:8px 12px;border-radius:50%;font-size:1.1rem;margin-left:8px;position:relative;">🔔<span id="notifyDot" style="position:absolute;top:2px;right:2px;width:8px;height:8px;background:#b12704;border-radius:50%;display:inline-block;"></span></button>
+    <button id="darkModeBtn" onclick="toggleDarkMode()" style="background:#232f3e;color:#ff9900;border:none;padding:8px 14px;border-radius:6px;font-weight:bold;cursor:pointer;margin-left:12px;">🌙</button>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Open Menu" tabindex="0">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <!-- Wishlist Modal -->
+    <div class="modal" id="wishlistModal" aria-modal="true" role="dialog">
+        <div class="modal-content" id="wishlistModalContent">
+            <span class="close-modal" onclick="closeWishlistModal()" aria-label="Close Wishlist">&times;</span>
+            <h2 style="color:#232f3e;">Wishlist</h2>
+            <div id="wishlistItemsList" style="margin:16px 0;"></div>
+        </div>
+    </div>
+    <!-- Account Modal -->
+    <div class="modal" id="accountModal" aria-modal="true" role="dialog">
+        <div class="modal-content" id="accountModalContent">
+            <span class="close-modal" onclick="closeAccountModal()" aria-label="Close Account">&times;</span>
+            <h2 style="color:#232f3e;">Account</h2>
+            <div id="accountSection">
+                <form id="loginForm" onsubmit="loginUser(event)">
+                    <input type="text" id="loginUser" placeholder="Username" required style="margin-bottom:8px;width:90%;padding:8px;">
+                    <input type="password" id="loginPass" placeholder="Password" required style="margin-bottom:8px;width:90%;padding:8px;">
+                    <button type="submit" style="background:#ff9900;color:#232f3e;border:none;padding:10px 22px;border-radius:6px;font-weight:bold;cursor:pointer;width:100%;">Login</button>
+                </form>
+                <div style="margin:8px 0;">or</div>
+                <form id="registerForm" onsubmit="registerUser(event)">
+                    <input type="text" id="regUser" placeholder="New Username" required style="margin-bottom:8px;width:90%;padding:8px;">
+                    <input type="password" id="regPass" placeholder="New Password" required style="margin-bottom:8px;width:90%;padding:8px;">
+                    <button type="submit" style="background:#febd69;color:#232f3e;border:none;padding:10px 22px;border-radius:6px;font-weight:bold;cursor:pointer;width:100%;">Register</button>
+                </form>
+                <div id="accountMsg" style="color:#b12704;margin-top:8px;"></div>
+            </div>
+            <div id="userWelcome" style="display:none;"></div>
+        </div>
+    </div>
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal" aria-modal="true" role="dialog">
+        <div class="modal-content" id="paymentModalContent">
+            <span class="close-modal" onclick="closePaymentModal()" aria-label="Close Payment">&times;</span>
+            <h2 style="color:#232f3e;">Payment</h2>
+            <p>Select payment method:</p>
+            <button onclick="showBkash()" style="background:#e2136e;color:#fff;margin:8px 0 8px 0;padding:8px 24px;border:none;border-radius:6px;font-weight:bold;">bKash</button>
+            <button onclick="showNagad()" style="background:#f7941d;color:#fff;margin:8px 0 8px 8px;padding:8px 24px;border:none;border-radius:6px;font-weight:bold;">Nagad</button>
+            <div id="paymentDetails" style="margin-top:16px;"></div>
+        </div>
+    </div>
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal" aria-modal="true" role="dialog">
+        <div class="modal-content" id="cartModalContent">
+            <span class="close-modal" onclick="closeCartModal()" aria-label="Close Cart">&times;</span>
+            <h2 style="color:#232f3e;">Your Cart</h2>
+            <div id="cartItemsList" style="margin:16px 0;"></div>
+            <div id="cartTotal" style="font-weight:bold;margin-bottom:16px;"></div>
+            <button onclick="checkoutCart()" style="background:#ff9900;color:#232f3e;border:none;padding:10px 22px;border-radius:6px;font-weight:bold;cursor:pointer;">Checkout</button>
+        </div>
+    </div>
+    <div class="hero">
+    <h1>Ghorer Dokan-এ স্বাগতম!</h1>
+    <p>আপনার ঘরের জন্য সেরা পণ্য, দ্রুত ডেলিভারি ও দারুণ অফার!</p>
+    <button class="cta-btn" style="margin-top:24px;background:#ff9900;color:#232f3e;border:none;padding:14px 36px;border-radius:6px;font-size:1.2rem;font-weight:bold;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.10);transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='#232f3e';this.style.color='#ff9900'" onmouseout="this.style.background='#ff9900';this.style.color='#232f3e'" onclick="window.scrollTo({top: document.querySelector('.categories').offsetTop-40, behavior: 'smooth'})">এখনই কেনাকাটা শুরু করুন</button>
+    </div>
+    <div class="categories">
+    <div class="category active" onclick="filterCategory(event, 'Electronics')">Electronics</div>
+    <div class="category" onclick="filterCategory(event, 'Home & Kitchen')">Home & Kitchen</div>
+    <div class="category" onclick="filterCategory(event, 'Fashion')">Fashion</div>
+    <div class="category" onclick="filterCategory(event, 'Toys')">Toys</div>
+    <div class="category" onclick="filterCategory(event, 'Books')">Books</div>
+    </div>
+        <!-- Price Range Filter -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin:18px 0 0 0;">
+            <label for="minPrice" style="color:#232f3e;font-weight:bold;">দাম (নূন্যতম):</label>
+            <input type="number" id="minPrice" min="0" placeholder="৳ মিনিমাম" style="padding:4px 8px;border-radius:4px;width:90px;">
+            <label for="maxPrice" style="color:#232f3e;font-weight:bold;">দাম (সর্বোচ্চ):</label>
+            <input type="number" id="maxPrice" min="0" placeholder="৳ সর্বোচ্চ" style="padding:4px 8px;border-radius:4px;width:90px;">
+            <button onclick="applyPriceFilter()" style="background:#ff9900;color:#232f3e;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">ফিল্টার করুন</button>
+            <button onclick="resetPriceFilter()" style="background:#fff;color:#b12704;border:1px solid #b12704;padding:6px 12px;border-radius:4px;font-weight:bold;">রিসেট</button>
+        </div>
+    <div style="display:flex;align-items:center;justify-content:flex-end;padding:0 32px 8px 32px;">
+        <label for="sortSelect" style="margin-right:8px;color:#232f3e;font-weight:bold;">সর্ট করুন:</label>
+        <select id="sortSelect" onchange="sortProducts()" style="padding:4px 8px;border-radius:4px;">
+            <option value="default">ডিফল্ট</option>
+            <option value="priceLow">দাম: কম থেকে বেশি</option>
+            <option value="priceHigh">দাম: বেশি থেকে কম</option>
+            <option value="ratingHigh">রেটিং: বেশি থেকে কম</option>
+        </select>
+    </div>
+    <div class="products" id="productsSection">
+    <!-- পণ্যের তালিকা এখানে জাভাস্ক্রিপ্ট থেকে আসবে -->
+    </div>
+    <!-- New Product Section -->
+    <div style="padding:32px;">
+        <h2 style="color:#232f3e;text-align:center;">New Arrivals</h2>
+        <div class="products" id="newProducts"></div>
+    </div>
+    <div class="modal" id="productModal">
+        <div class="modal-content" id="modalContent">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <img id="modalImg" src="" alt="Product" style="width: 100%; height: 180px; object-fit: contain; margin-bottom: 12px;">
+            <div id="modalTitle" class="product-title"></div>
+            <div id="modalRating" class="product-rating"></div>
+            <div id="modalPrice" class="product-price"></div>
+            <p id="modalDesc" style="margin-bottom: 16px; color: #232f3e;">Product details will appear here.</p>
+            <button onclick="addToCart(event)">Order Now</button>
+            <div id="reviewSection" style="margin-top:18px;">
+                <h4 style="color:#232f3e;">Reviews</h4>
+                <div id="reviewsList" style="margin-bottom:8px;"></div>
+                <form onsubmit="addReview(event)" style="display:flex;gap:8px;">
+                    <input type="text" id="reviewInput" placeholder="Write a review..." required style="flex:1;padding:6px;">
+                    <button type="submit" style="background:#ff9900;color:#232f3e;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- About Us Modal -->
+    <div class="modal" id="aboutModal" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeAboutModal()" aria-label="Close About">&times;</span>
+            <h2 style="color:#232f3e;">About Us</h2>
+            <p style="color:#232f3e;">Ghorer Dokan is your trusted online shop for home, electronics, fashion, and more. Fast delivery, best offers, and customer satisfaction are our top priorities. Inspired by Amazon, made for Bangladesh!</p>
+        </div>
+    </div>
+    <!-- Payment Proof Modal -->
+    <div class="modal" id="proofModal" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProofModal()" aria-label="Close Proof">&times;</span>
+            <h2 style="color:#232f3e;">Payment Proof</h2>
+            <form onsubmit="uploadProof(event)">
+                <input type="file" id="proofFile" accept="image/*" required style="margin-bottom:8px;">
+                <button type="submit" style="background:#ff9900;color:#232f3e;border:none;padding:8px 22px;border-radius:6px;font-weight:bold;">Upload</button>
+            </form>
+            <div id="proofMsg" style="margin-top:8px;color:#232f3e;"></div>
+            <div id="proofGallery" style="margin-top:12px;"></div>
+        </div>
+    </div>
+    <!-- Live Chat Widget -->
+    <div id="liveChatWidget" style="position:fixed;bottom:24px;right:24px;z-index:3000;">
+        <div id="chatBox" style="background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.13);width:320px;display:none;flex-direction:column;">
+            <div style="background:#232f3e;color:#fff;padding:10px 16px;border-radius:12px 12px 0 0;display:flex;justify-content:space-between;align-items:center;">
+                <span>Live Chat</span>
+                <span style="cursor:pointer;" onclick="toggleChat()">&times;</span>
+            </div>
+            <div id="chatMessages" style="flex:1;min-height:120px;max-height:180px;overflow-y:auto;padding:8px;"></div>
+            <form onsubmit="sendChat(event)" style="display:flex;gap:4px;padding:8px;">
+                <input type="text" id="chatInput" placeholder="Type a message..." required style="flex:1;padding:6px;">
+                <button type="submit" style="background:#ff9900;color:#232f3e;border:none;padding:6px 12px;border-radius:4px;font-weight:bold;">Send</button>
+            </form>
+        </div>
+        <button onclick="toggleChat()" id="chatBtn" style="background:#ff9900;color:#232f3e;border:none;padding:12px 18px;border-radius:50%;font-size:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,0.13);cursor:pointer;">💬</button>
+    </div>
+        </div>
+    </div>
+    <div class="footer">
+    <div id="toast" class="toast"></div>
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" style="display:none;position:fixed;left:0;top:0;width:100vw;height:100vh;background:rgba(255,255,255,0.6);z-index:4000;justify-content:center;align-items:center;">
+        <div style="border:6px solid #eee;border-top:6px solid #ff9900;border-radius:50%;width:48px;height:48px;animation:spin 1s linear infinite;"></div>
+    </div>
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollTopBtn" style="display:none;position:fixed;bottom:90px;right:32px;background:#232f3e;color:#ff9900;border:none;padding:12px 16px;border-radius:50%;font-size:1.3rem;box-shadow:0 2px 8px rgba(0,0,0,0.13);cursor:pointer;z-index:3000;">↑</button>
+        <form class="newsletter" onsubmit="subscribeNewsletter(event)">
+            <input type="email" id="newsletterEmail" placeholder="Subscribe to our newsletter" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <div id="newsletterMsg" style="color:#ff9900; margin-bottom: 8px;"></div>
+        <div style="margin-bottom:8px;">
+            <a href="#" onclick="openAboutModal(event)" style="color:#ff9900;text-decoration:underline;">About Us</a> |
+            <a href="#" onclick="openProofModal(event)" style="color:#ff9900;text-decoration:underline;">Payment Proof</a> |
+            <a href="#" onclick="openFeedbackModal(event)" style="color:#ff9900;text-decoration:underline;">Feedback</a> |
+            <a href="#" onclick="openFaqModal(event)" style="color:#ff9900;text-decoration:underline;">FAQ</a>
+    <!-- FAQ Modal -->
+    <div class="modal" id="faqModal" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeFaqModal()" aria-label="Close FAQ">&times;</span>
+            <h2 style="color:#232f3e;">প্রশ্নোত্তর (FAQ)</h2>
+            <div style="text-align:left;">
+                <b>কিভাবে অর্ডার করব?</b><br> পণ্য কার্টে যোগ করুন, চেকআউট করুন এবং পেমেন্ট করুন।<br><br>
+                <b>কিভাবে পেমেন্ট করব?</b><br> বিকাশ/নগদ দিয়ে পেমেন্ট করুন এবং প্রুফ আপলোড করুন।<br><br>
+                <b>ডেলিভারি কতদিনে পাব?</b><br> সাধারণত ২-৫ দিনের মধ্যে।<br><br>
+                <b>সাপোর্টের জন্য কিভাবে যোগাযোগ করব?</b><br> লাইভ চ্যাট বা ফিডব্যাক ফর্ম ব্যবহার করুন।<br>
+            </div>
+        </div>
+    </div>
+        </div>
+        &copy; 2025 Ghorer Dokan. Inspired by Amazon. All rights reserved.
+    </div>
+    <!-- Feedback Modal -->
+    <div class="modal" id="feedbackModal" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeFeedbackModal()" aria-label="Close Feedback">&times;</span>
+            <h2 style="color:#232f3e;">Feedback</h2>
+            <form onsubmit="submitFeedback(event)">
+                <textarea id="feedbackInput" placeholder="Your feedback..." required style="width:90%;height:60px;margin-bottom:8px;"></textarea>
+                <button type="submit" style="background:#ff9900;color:#232f3e;border:none;padding:8px 22px;border-radius:6px;font-weight:bold;">Send</button>
+            </form>
+            <div id="feedbackMsg" style="margin-top:8px;color:#232f3e;"></div>
+        </div>
+    </div>
+<footer style="background:#232f3e;color:#fff;padding:40px 0 20px 0;margin-top:48px;font-family:'Roboto',Arial,sans-serif;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;text-align:left;">
+    <div><a href="#" onclick="showToast('Ghorer Dokan Music')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Music</a><br>Stream millions of Bangla & English songs</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Ads')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Ads</a><br>Reach customers wherever they spend their time</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Business')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Business</a><br>Everything For Your Business</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Global')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Global</a><br>Ship Orders Internationally</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Web Services')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Web Services</a><br>Scalable Cloud Computing Services</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Books')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Books</a><br>Books, art & collectibles</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan TV')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan TV</a><br>Movies, TV & Celebrities</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Pharmacy')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Pharmacy</a><br>Pharmacy Simplified</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Shoes')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Shoes</a><br>Shoes & Clothing</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Security')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Security</a><br>Smart Home Security Systems</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Subscription Boxes')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Subscription Boxes</a><br>Top subscription boxes – right to your door</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan App')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan App</a><br>Real-Time Crime & Safety Alerts</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Deals')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Deals</a><br>Deals and Shenanigans</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Reviews')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Reviews</a><br>Book reviews & recommendations</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Fashion')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Fashion</a><br>Designer Fashion Brands</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Electronics')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Electronics</a><br>Latest gadgets & tech</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Home')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Home</a><br>Everything for your home</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Grocery')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Grocery</a><br>Daily essentials delivered</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Toys')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Toys</a><br>Fun for kids of all ages</div>
+    <div><a href="#" onclick="showToast('Ghorer Dokan Health')" style="color:#ff9900;text-decoration:none;font-weight:bold;">Ghorer Dokan Health</a><br>Health & wellness products</div>
+  </div>
+  <div style="text-align:center;margin-top:32px;font-size:0.95rem;color:#bbb;">
+    <a href="#" style="color:#ff9900;text-decoration:underline;margin:0 8px;">Conditions of Use</a>
+    <a href="#" style="color:#ff9900;text-decoration:underline;margin:0 8px;">Privacy Notice</a>
+    <a href="#" style="color:#ff9900;text-decoration:underline;margin:0 8px;">Consumer Health Data Privacy Disclosure</a>
+    <a href="#" style="color:#ff9900;text-decoration:underline;margin:0 8px;">Your Ads Privacy Choices</a>
+    <br>
+    &copy; 2025 Ghorer Dokan. Inspired by Amazon. All rights reserved.
+  </div>
+  <div style="text-align:center;margin:32px 0 12px 0;font-size:1rem;color:#232f3e;font-family:'Roboto',Arial,sans-serif;">
+  <span style="font-weight:bold;">Developed by Eamin</span><br>
+  Email: <a href="mailto:eyaminahmed166@gmail.com" style="color:#ff9900;text-decoration:underline;">eyaminahmed166@gmail.com</a><br>
+  <a href="https://youtube.com/@eaminlearneducation?si=oxmTSwePRE4p2w0Z" target="_blank" style="color:#ff9900;text-decoration:underline;margin:0 8px;">YouTube</a>
+  <a href="https://www.facebook.com/share/16mAW16CMh/" target="_blank" style="color:#ff9900;text-decoration:underline;margin:0 8px;">Facebook</a>
+  <a href="https://www.tiktok.com/@eaminlearneducation?_t=ZS-8ykAIHdB9QV&_r=1" target="_blank" style="color:#ff9900;text-decoration:underline;margin:0 8px;">TikTok</a>
+</div>
+</footer>
+    </div>
+</body>
+    <script>
+        // Order tracking logic (demo)
+        function openOrderTrackingModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('orderModal').style.display = 'flex';
+            document.getElementById('orderStatus').textContent = '';
+        }
+        function closeOrderTrackingModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+        function trackOrder(e) {
+            e.preventDefault();
+            const id = document.getElementById('orderIdInput').value;
+            document.getElementById('orderStatus').textContent = id ? 'অর্ডার স্ট্যাটাস: প্রসেসিং (ডেমো)' : '';
+        }
+        // Language switcher (demo)
+        function switchLang() {
+            const lang = document.getElementById('langSwitcher').value;
+            showToast(lang==='bn' ? 'ভাষা: বাংলা (ডেমো)' : 'Language: English (Demo)');
+        }
+        // Notification bell logic
+        function showNotification() {
+            showToast('নতুন অফার: সব ইলেকট্রনিক্সে ১০% ছাড়!');
+            document.getElementById('notifyDot').style.display = 'none';
+        }
+        // FAQ Modal Logic
+        function openFaqModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('faqModal').style.display = 'flex';
+        }
+        function closeFaqModal() {
+            document.getElementById('faqModal').style.display = 'none';
+        }
+        // Scroll to Top Button Logic
+        window.onscroll = function() {
+            document.getElementById('scrollTopBtn').style.display = (window.scrollY > 200) ? 'block' : 'none';
+        };
+        function scrollToTop() {
+            window.scrollTo({top:0,behavior:'smooth'});
+        }
+        // পণ্যের সর্টিং
+        window.currentSort = 'default';
+        function sortProducts() {
+            window.currentSort = document.getElementById('sortSelect').value;
+            const activeCat = document.querySelector('.category.active').textContent;
+            const searchText = document.getElementById('searchInput').value;
+            renderProducts(activeCat, searchText);
+        }
+        // Dark mode toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            if(document.body.classList.contains('dark-mode')) {
+                document.body.style.background = '#181818';
+                document.body.style.color = '#fff';
+            } else {
+                document.body.style.background = '';
+                document.body.style.color = '';
+            }
+        }
+        // Wishlist logic
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')||'[]');
+        function updateWishlistCount() {
+            document.getElementById('wishlistCount').textContent = wishlist.length;
+        }
+        function addToWishlist(e, idx) {
+            e.stopPropagation();
+            const prod = products[idx];
+            if (!wishlist.find(item => item.title === prod.title)) {
+                wishlist.push(prod);
+                localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                updateWishlistCount();
+                showToast('Added to wishlist!');
+            }
+        }
+        function openWishlistModal(e) {
+            if (e) e.preventDefault();
+            renderWishlistItems();
+            document.getElementById('wishlistModal').style.display = 'flex';
+        }
+        function closeWishlistModal() {
+            document.getElementById('wishlistModal').style.display = 'none';
+        }
+        function renderWishlistItems() {
+            const list = document.getElementById('wishlistItemsList');
+            if (!wishlist.length) {
+                list.innerHTML = '<div style="color:#b12704;">Your wishlist is empty.</div>';
+                return;
+            }
+            list.innerHTML = wishlist.map((item,i)=>`<div style='display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;'><span>${item.title}</span><button onclick="removeWishlistItem(${i})" style="background:#b12704;color:#fff;border:none;padding:2px 8px;border-radius:4px;cursor:pointer;">x</button></div>`).join('');
+        }
+        function removeWishlistItem(idx) {
+            wishlist.splice(idx,1);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            updateWishlistCount();
+            renderWishlistItems();
+        }
+        updateWishlistCount();
+        // Accessibility: Hamburger menu keyboard support
+        document.getElementById('hamburger').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') toggleMenu();
+        });
+        // Hamburger menu
+        function toggleMenu() {
+            var nav = document.getElementById('mainNav');
+            nav.classList.toggle('open');
+        }
+        // Account Modal Logic
+        function openAccountModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('accountModal').style.display = 'flex';
+            showAccountState();
+        }
+        function closeAccountModal() {
+            document.getElementById('accountModal').style.display = 'none';
+        }
+        function showAccountState() {
+            const user = localStorage.getItem('user');
+            document.getElementById('accountSection').style.display = user ? 'none' : 'block';
+            document.getElementById('userWelcome').style.display = user ? 'block' : 'none';
+            if (user) {
+                document.getElementById('userWelcome').innerHTML = `Welcome, <b>${user}</b>! <button onclick="logoutUser()" style="background:#b12704;color:#fff;border:none;padding:4px 12px;border-radius:4px;cursor:pointer;">Logout</button>`;
+            }
+        }
+        function loginUser(e) {
+            e.preventDefault();
+            const u = document.getElementById('loginUser').value;
+            const p = document.getElementById('loginPass').value;
+            const regU = localStorage.getItem('regUser');
+            const regP = localStorage.getItem('regPass');
+            if (u === regU && p === regP) {
+                localStorage.setItem('user', u);
+                document.getElementById('accountMsg').textContent = '';
+                showAccountState();
+            } else {
+                document.getElementById('accountMsg').textContent = 'Invalid credentials!';
+            }
+        }
+        function registerUser(e) {
+            e.preventDefault();
+            const u = document.getElementById('regUser').value;
+            const p = document.getElementById('regPass').value;
+            localStorage.setItem('regUser', u);
+            localStorage.setItem('regPass', p);
+            document.getElementById('accountMsg').textContent = 'Registration successful! Please login.';
+        }
+        function logoutUser() {
+            localStorage.removeItem('user');
+            showAccountState();
+        }
+        // Payment Modal Logic
+        function openPaymentModal() {
+            document.getElementById('paymentModal').style.display = 'flex';
+            document.getElementById('paymentDetails').innerHTML = '';
+        }
+        function closePaymentModal() {
+            document.getElementById('paymentModal').style.display = 'none';
+        }
+        function showBkash() {
+            document.getElementById('paymentDetails').innerHTML = '<b>bKash Number:</b> 01XXXXXXXXX<br><b>Send money and upload proof below.';
+        }
+        function showNagad() {
+            document.getElementById('paymentDetails').innerHTML = '<b>Nagad Number:</b> 01XXXXXXXXX<br><b>Send money and upload proof below.';
+        }
+        // About Us Modal
+        function openAboutModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('aboutModal').style.display = 'flex';
+        }
+        function closeAboutModal() {
+            document.getElementById('aboutModal').style.display = 'none';
+        }
+        // Payment Proof Modal
+        function openProofModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('proofModal').style.display = 'flex';
+            renderProofGallery();
+        }
+        function closeProofModal() {
+            document.getElementById('proofModal').style.display = 'none';
+        }
+        function uploadProof(e) {
+            e.preventDefault();
+            const file = document.getElementById('proofFile').files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(ev) {
+                let proofs = JSON.parse(localStorage.getItem('proofs')||'[]');
+                proofs.push(ev.target.result);
+                localStorage.setItem('proofs', JSON.stringify(proofs));
+                document.getElementById('proofMsg').textContent = 'Uploaded!';
+                renderProofGallery();
+            };
+            reader.readAsDataURL(file);
+        }
+        function renderProofGallery() {
+            let proofs = JSON.parse(localStorage.getItem('proofs')||'[]');
+            document.getElementById('proofGallery').innerHTML = proofs.map(p=>`<img src="${p}" style="width:60px;height:60px;margin:4px;border-radius:6px;object-fit:cover;">`).join('');
+        }
+        // Feedback Modal
+        function openFeedbackModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('feedbackModal').style.display = 'flex';
+        }
+        function closeFeedbackModal() {
+            document.getElementById('feedbackModal').style.display = 'none';
+        }
+        function submitFeedback(e) {
+            e.preventDefault();
+            const msg = document.getElementById('feedbackInput').value;
+            document.getElementById('feedbackMsg').textContent = 'Thank you for your feedback!';
+            document.getElementById('feedbackInput').value = '';
+        }
+        // Live Chat Widget
+        function toggleChat() {
+            const box = document.getElementById('chatBox');
+            box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+        }
+        function sendChat(e) {
+            e.preventDefault();
+            const input = document.getElementById('chatInput');
+            const msg = input.value;
+            if (!msg) return;
+            const chatMessages = document.getElementById('chatMessages');
+            chatMessages.innerHTML += `<div style='margin-bottom:4px;'><b>You:</b> ${msg}</div>`;
+            setTimeout(()=>{
+                chatMessages.innerHTML += `<div style='margin-bottom:4px;'><b>Support:</b> Thank you for your message! (Demo)</div>`;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 800);
+            input.value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+    // ফেক প্রোডাক্ট ডেটা (বাংলা কমেন্ট সহ)
+    const products = [
+            {
+                title: 'Smart Watch',
+                img: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$129.99',
+                desc: 'Track your fitness, notifications, and more with this stylish smart watch.',
+                category: 'Electronics'
+            },
+            {
+                title: 'Bluetooth Speaker',
+                img: 'https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$39.99',
+                desc: 'Portable Bluetooth speaker with deep bass and 12-hour playtime.',
+                category: 'Electronics'
+            },
+            {
+                title: 'Rice Cooker',
+                img: 'https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$29.99',
+                desc: 'Automatic rice cooker for your kitchen.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'T-shirt',
+                img: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★☆☆',
+                price: '$9.99',
+                desc: 'Comfortable cotton t-shirt.',
+                category: 'Fashion'
+            },
+            {
+                title: 'Toy Car',
+                img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$5.99',
+                desc: 'Fun toy car for kids.',
+                category: 'Toys'
+            },
+            {
+                title: 'Story Book',
+                img: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$3.99',
+                desc: 'Interesting story book for children.',
+                category: 'Books'
+            },
+            // New products
+            {
+                title: 'Electric Kettle',
+                img: 'https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$19.99',
+                desc: 'Fast boiling electric kettle for your kitchen.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Men’s Wallet',
+                img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★☆☆',
+                price: '$12.99',
+                desc: 'Classic leather wallet for men.',
+                category: 'Fashion'
+            },
+            {
+                title: 'Kids Backpack',
+                img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$15.99',
+                desc: 'Colorful and durable backpack for kids.',
+                category: 'Toys'
+            },
+            {
+                title: 'Cookbook',
+                img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$8.99',
+                desc: 'Delicious recipes for home cooking.',
+                category: 'Books'
+            },
+            {
+                title: 'Table Lamp',
+                img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$24.99',
+                desc: 'Modern LED table lamp for study or work.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Women’s Handbag',
+                img: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$39.99',
+                desc: 'Stylish handbag for women.',
+                category: 'Fashion'
+            },
+            {
+                title: 'Building Blocks',
+                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$14.99',
+                desc: 'Creative building blocks set for kids.',
+                category: 'Toys'
+            },
+            {
+                title: 'Notebook',
+                img: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$2.99',
+                desc: 'Spiral notebook for school or office.',
+                category: 'Books'
+            },
+            {
+                title: 'Blender',
+                img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$34.99',
+                desc: 'Powerful blender for smoothies and shakes.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Sunglasses',
+                img: 'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★☆☆',
+                price: '$17.99',
+                desc: 'Trendy sunglasses for men and women.',
+                category: 'Fashion'
+            },
+            {
+                title: 'Remote Control Car',
+                img: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$22.99',
+                desc: 'High-speed remote control car for kids.',
+                category: 'Toys'
+            },
+            {
+                title: 'Science Book',
+                img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$6.99',
+                desc: 'Fun science book for young learners.',
+                category: 'Books'
+            }
+            ,
+            // 21
+            {
+                title: 'Smartphone',
+                img: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$299.99',
+                desc: 'Latest model smartphone with high-res camera.',
+                category: 'Electronics'
+            },
+            {
+                title: 'Bluetooth Earbuds',
+                img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$49.99',
+                desc: 'Wireless earbuds with charging case.',
+                category: 'Electronics'
+            },
+            {
+                title: 'Air Fryer',
+                img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$89.99',
+                desc: 'Healthy cooking with this modern air fryer.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Bed Sheet Set',
+                img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$27.99',
+                desc: 'Soft and comfortable bed sheet set.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Women’s Scarf',
+                img: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$11.99',
+                desc: 'Elegant scarf for women.',
+                category: 'Fashion'
+            },
+            {
+                title: 'Men’s Belt',
+                img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$13.99',
+                desc: 'Durable leather belt for men.',
+                category: 'Fashion'
+            },
+            {
+                title: 'Puzzle Game',
+                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$9.99',
+                desc: 'Challenging puzzle game for all ages.',
+                category: 'Toys'
+            },
+            {
+                title: 'Doll House',
+                img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$29.99',
+                desc: 'Beautiful doll house for kids.',
+                category: 'Toys'
+            },
+            {
+                title: 'English Grammar Book',
+                img: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$5.99',
+                desc: 'Improve your English with this grammar book.',
+                category: 'Books'
+            },
+            {
+                title: 'Drawing Book',
+                img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$3.49',
+                desc: 'Perfect for artists and kids.',
+                category: 'Books'
+            },
+            {
+                title: 'Coffee Maker',
+                img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$54.99',
+                desc: 'Brew fresh coffee every morning.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Curtain Set',
+                img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★☆☆',
+                price: '$18.99',
+                desc: 'Decorative curtain set for your home.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Women’s Sandals',
+                img: 'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$21.99',
+                desc: 'Comfortable sandals for women.',
+                category: 'Fashion'
+            },
+            {
+                title: 'Men’s Cap',
+                img: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★☆☆',
+                price: '$7.99',
+                desc: 'Stylish cap for men.',
+                category: 'Fashion'
+            },
+            {
+                title: 'RC Helicopter',
+                img: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$34.99',
+                desc: 'Remote control helicopter for kids.',
+                category: 'Toys'
+            },
+            {
+                title: 'Board Game',
+                img: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$16.99',
+                desc: 'Fun board game for family and friends.',
+                category: 'Toys'
+            },
+            {
+                title: 'Bangla Novel',
+                img: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★★',
+                price: '$4.99',
+                desc: 'Popular Bangla novel for book lovers.',
+                category: 'Books'
+            },
+            {
+                title: 'Travel Guide',
+                img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$7.49',
+                desc: 'Explore new places with this travel guide.',
+                category: 'Books'
+            },
+            {
+                title: 'Toaster',
+                img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★☆☆',
+                price: '$22.99',
+                desc: 'Make crispy toast every morning.',
+                category: 'Home & Kitchen'
+            },
+            {
+                title: 'Wall Clock',
+                img: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80',
+                rating: '★★★★☆',
+                price: '$14.99',
+                desc: 'Modern wall clock for your living room.',
+                category: 'Home & Kitchen'
+            }
+        ];
+                // Add 20 more daily essential products
+                const moreDailyEssentials = [
+                    {title:'Bucket',cat:'Home & Kitchen'},
+                    {title:'Mug',cat:'Home & Kitchen'},
+                    {title:'Plate',cat:'Home & Kitchen'},
+                    {title:'Spoon',cat:'Home & Kitchen'},
+                    {title:'Glass',cat:'Home & Kitchen'},
+                    {title:'Cooking Pot',cat:'Home & Kitchen'},
+                    {title:'Pressure Cooker',cat:'Home & Kitchen'},
+                    {title:'Gas Lighter',cat:'Home & Kitchen'},
+                    {title:'Dustbin',cat:'Home & Kitchen'},
+                    {title:'Floor Cleaner',cat:'Home & Kitchen'},
+                    {title:'Toilet Brush',cat:'Home & Kitchen'},
+                    {title:'Shaving Razor',cat:'Personal Care'},
+                    {title:'Hair Oil',cat:'Personal Care'},
+                    {title:'Face Wash',cat:'Personal Care'},
+                    {title:'Nail Cutter',cat:'Personal Care'},
+                    {title:'Comb',cat:'Personal Care'},
+                    {title:'Mosquito Coil',cat:'Health'},
+                    {title:'First Aid Box',cat:'Health'},
+                    {title:'Torch Light',cat:'Electronics'},
+                    {title:'Extension Cord',cat:'Electronics'}
+                ];
+                const newMoreDailyProducts = moreDailyEssentials.map((item, i) => ({
+                    title: item.title,
+                    img: `https://picsum.photos/seed/moredaily${products.length + i + 1}/400/300`,
+                    rating: ['★★★☆☆','★★★★☆','★★★★★'][i%3],
+                    price: `$${(Math.random()*25+2).toFixed(2)}`,
+                    desc: `Useful ${item.title} for daily household and personal needs.`,
+                    category: item.cat
+                }));
+                products.push(...newMoreDailyProducts);
+                // Add another 20 Electronics products
+                const moreElectronicsItems = [
+                    'Smart Doorbell', 'Wireless Charger', 'Bluetooth Tracker', 'Smart Thermostat', 'Portable Projector',
+                    'Digital Photo Frame', 'Smart Scale', 'Electric Toothbrush', 'Smart Lock', 'Noise Cancelling Headphones',
+                    'Smart Fan', 'Smart Air Purifier', 'Smart Refrigerator', 'Smart Oven', 'Smart Coffee Maker',
+                    'Smart Vacuum', 'Smart Curtain', 'Smart Switch', 'Smart Garage Opener', 'Smart Sprinkler'
+                ];
+                const newElectronicsBatch2 = moreElectronicsItems.map((title, i) => ({
+                    title,
+                    img: `https://picsum.photos/seed/electronics${products.length + i + 1}/400/300`,
+                    rating: ['★★★☆☆','★★★★☆','★★★★★'][i%3],
+                    price: `$${(Math.random()*350+25).toFixed(2)}`,
+                    desc: `Innovative ${title} for your smart home and tech lifestyle.`,
+                    category: 'Electronics'
+                }));
+                products.push(...newElectronicsBatch2);
+                // Add 20 new Electronics products
+                const electronicsItems = [
+                    'Bluetooth Headset', 'Smart TV', 'Wireless Mouse', 'Gaming Keyboard', 'Portable Speaker',
+                    'Fitness Tracker', 'Action Camera', 'Smart Plug', 'VR Headset', 'Drone',
+                    'Power Bank', 'USB Hub', 'Laptop Stand', 'Monitor', 'Webcam',
+                    'Smart Light', 'Soundbar', 'Tablet', 'Smartwatch', 'Home Security Camera'
+                ];
+                    const newElectronicsBatch = electronicsItems.map((title, i) => ({
+                        title,
+                        img: `https://picsum.photos/seed/electronics${products.length + i + 1}/400/300`,
+                        rating: ['★★★☆☆','★★★★☆','★★★★★'][i%3],
+                        price: `$${(Math.random()*300+20).toFixed(2)}`,
+                        desc: `Latest ${title} for your tech needs.`,
+                        category: 'Electronics'
+                    }));
+                    products.push(...newElectronicsBatch);
+                // Add 20 daily essential products
+                const dailyEssentials = [
+                    {title:'Water Bottle',cat:'Home & Kitchen'},
+                    {title:'Umbrella',cat:'Accessories'},
+                    {title:'Lunch Box',cat:'Home & Kitchen'},
+                    {title:'Toothbrush',cat:'Personal Care'},
+                    {title:'Towel',cat:'Home & Kitchen'},
+                    {title:'Face Mask',cat:'Health'},
+                    {title:'Hand Sanitizer',cat:'Health'},
+                    {title:'Soap',cat:'Personal Care'},
+                    {title:'Detergent',cat:'Home & Kitchen'},
+                    {title:'Cooking Oil',cat:'Grocery'},
+                    {title:'Rice',cat:'Grocery'},
+                    {title:'Milk',cat:'Grocery'},
+                    {title:'Eggs',cat:'Grocery'},
+                    {title:'Notebook',cat:'Stationery'},
+                    {title:'Pen',cat:'Stationery'},
+                    {title:'Slippers',cat:'Fashion'},
+                    {title:'Shampoo',cat:'Personal Care'},
+                    {title:'Broom',cat:'Home & Kitchen'},
+                    {title:'Light Bulb',cat:'Home & Kitchen'},
+                    {title:'Power Strip',cat:'Electronics'}
+                ];
+                const newDailyProducts = dailyEssentials.map((item, i) => ({
+                    title: item.title,
+                    img: `https://picsum.photos/seed/daily${products.length + i + 1}/400/300`,
+                    rating: ['★★★☆☆','★★★★☆','★★★★★'][i%3],
+                    price: `$${(Math.random()*30+2).toFixed(2)}`,
+                    desc: `Essential ${item.title} for daily use. Reliable and affordable.`,
+                    category: item.cat
+                }));
+                products.push(...newDailyProducts);
+                // Add 20 IT-related products for New Arrivals
+                const itCategories = [
+                    'Laptop', 'Desktop', 'Monitor', 'Keyboard', 'Mouse', 'Printer', 'Router', 'SSD', 'RAM', 'Motherboard',
+                    'Graphics Card', 'Webcam', 'Microphone', 'Server', 'NAS', 'Tablet', 'Smartphone', 'Smartwatch', 'USB Drive', 'Power Bank'
+                ];
+                const newITProducts = itCategories.map((cat, i) => ({
+                    title: `${cat} Pro ${i+1}`,
+                    img: `https://picsum.photos/seed/it${products.length + i + 1}/400/300`,
+                    rating: ['★★★☆☆','★★★★☆','★★★★★'][i%3],
+                    price: `$${(Math.random()*500+50).toFixed(2)}`,
+                    desc: `Latest ${cat} for IT professionals. High performance and reliability.`,
+                    category: 'IT'
+                }));
+                products.push(...newITProducts);
+            // Add 20 new products related to Electronics but with different categories
+            const otherCatElectronics = [
+                'Smart Home', 'Gadgets', 'Wearables', 'Audio', 'Computers',
+                'Mobile Accessories', 'Gaming', 'Office Tech', 'Cameras', 'Networking',
+                'Drones', 'Fitness Tech', 'VR/AR', 'Car Electronics', 'Power & Charging',
+                'Security', 'Health Tech', 'TV & Media', 'Storage', 'Robotics'
+            ];
+            const newElectronicsProducts = otherCatElectronics.map((cat, i) => ({
+                title: `Electronics Special ${i+1}`,
+                img: `https://picsum.photos/seed/electronics${products.length + i + 1}/400/300`,
+                rating: ['★★★☆☆','★★★★☆','★★★★★'][i%3],
+                price: `$${(Math.random()*200+20).toFixed(2)}`,
+                desc: `Latest ${cat} device with advanced features.`,
+                category: cat
+            }));
+            products.push(...newElectronicsProducts);
+            // Add 20 new products (batch)
+            const newProducts = Array.from({length: 20}, (_, i) => ({
+                title: `New Product ${products.length + i + 1}`,
+                img: `https://picsum.photos/seed/new${products.length + i + 1}/400/300`,
+                rating: ['★★★☆☆','★★★★☆','★★★★★'][i%3],
+                price: `$${(Math.random()*100+5).toFixed(2)}`,
+                desc: `This is a description for New Product ${products.length + i + 1}. High quality and best price.`,
+                category: ['Electronics','Home & Kitchen','Fashion','Toys','Books'][i%5]
+            }));
+            products.push(...newProducts);
+        // পণ্যের তালিকা দেখানোর ফাংশন
+            function renderProducts(filterCategory = 'Electronics', searchText = '') {
+                const productsDiv = document.querySelector('.products');
+                showSpinner();
+                setTimeout(function() {
+                    productsDiv.innerHTML = '';
+                    // Price filter
+                    let min = parseFloat(document.getElementById('minPrice')?.value) || 0;
+                    let max = parseFloat(document.getElementById('maxPrice')?.value) || Infinity;
+                    let count = 0;
+                    for (let idx = 0; idx < products.length; idx++) {
+                        if (count >= 40) break;
+                        const product = products[idx];
+                        let priceNum = parseFloat(product.price.replace('$',''));
+                        if ((filterCategory === product.category)
+                            && (product.title.toLowerCase().includes(searchText.toLowerCase()) || product.desc.toLowerCase().includes(searchText.toLowerCase()))
+                            && (priceNum >= min && priceNum <= max)) {
+                            productsDiv.innerHTML += `
+                                <div class="product" onclick="openModal(${idx})" tabindex="0" aria-label="${product.title}, ${product.price}, ${product.rating}" onmouseover="this.querySelector('.quick-view-btn').style.display='block'" onmouseout="this.querySelector('.quick-view-btn').style.display='none'">
+                                    <img src="${product.img}" alt="${product.title}">
+                                    <button class="quick-view-btn" onclick="event.stopPropagation();openModal(${idx});">Quick View</button>
+                                    <div class="product-title">${product.title}</div>
+                                    <div class="product-rating">${product.rating}</div>
+                                    <div class="product-price">${product.price}</div>
+                                    <button onclick="addToCart(event, ${idx})" aria-label="Order ${product.title}">Order Now</button>
+                                    <button onclick="addToWishlist(event, ${idx})" aria-label="Add ${product.title} to wishlist" style="background:#fff;color:#ff9900;border:1px solid #ff9900;margin-left:8px;">♡</button>
+                                </div>
+                            `;
+                            count++;
+                        }
+                    }
+                    hideSpinner();
+                }, 400);
+            }
+
+            // Price filter apply/reset
+            function applyPriceFilter() {
+                const activeCat = document.querySelector('.category.active').textContent;
+                const searchText = document.getElementById('searchInput').value;
+                renderProducts(activeCat, searchText);
+            }
+            function resetPriceFilter() {
+                document.getElementById('minPrice').value = '';
+                document.getElementById('maxPrice').value = '';
+                applyPriceFilter();
+            }
+        // New Product Section rendering (last 3 products)
+        function renderNewProducts() {
+            const newDiv = document.getElementById('newProducts');
+            newDiv.innerHTML = '';
+            products.slice(-3).forEach((product, idx) => {
+                newDiv.innerHTML += `
+                    <div class="product" tabindex="0" aria-label="${product.title}, ${product.price}, ${product.rating}" onclick="openModal(${products.length-3+idx})">
+                        <img src="${product.img}" alt="${product.title}">
+                        <div class="product-title">${product.title}</div>
+                        <div class="product-rating">${product.rating}</div>
+                        <div class="product-price">${product.price}</div>
+                        <button onclick="addToCart(event, ${products.length-3+idx})" aria-label="Order ${product.title}">Order Now</button>
+                    </div>
+                `;
+            });
+        }
+        renderNewProducts();
+        // প্রথমবার লোডে ডিফল্ট ক্যাটাগরি দেখানো
+        renderProducts();
+        // প্রোডাক্ট ডিটেইল মডাল
+        function openModal(idx) {
+            event.stopPropagation();
+            document.getElementById('productModal').style.display = 'flex';
+            document.getElementById('modalImg').src = products[idx].img;
+            document.getElementById('modalTitle').textContent = products[idx].title;
+            document.getElementById('modalRating').textContent = products[idx].rating;
+            document.getElementById('modalPrice').textContent = products[idx].price;
+            document.getElementById('modalDesc').textContent = products[idx].desc;
+            document.getElementById('productModal').setAttribute('aria-label', products[idx].title + ' details');
+            renderReviews(idx);
+            document.getElementById('reviewInput').setAttribute('data-idx', idx);
+            // Social share button
+            setTimeout(function() {
+                if (!document.getElementById('shareBtn')) {
+                    document.getElementById('modalDesc').insertAdjacentHTML('afterend', `<div style='margin:10px 0;'><button id="shareBtn" onclick="shareProduct(event,${idx})" style="background:#ff9900;color:#232f3e;border:none;padding:6px 16px;border-radius:4px;font-weight:bold;">শেয়ার লিংক 🔗</button></div>`);
+                }
+            }, 50);
+        // Social share logic
+        function shareProduct(e, idx) {
+            e.stopPropagation();
+            const url = window.location.href.split('#')[0] + `#product${idx}`;
+            navigator.clipboard.writeText(url);
+            showToast('লিংক কপি হয়েছে!');
+        }
+        }
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+        // Prevent modal click from closing
+        document.getElementById('modalContent')?.addEventListener('click', function(e) { e.stopPropagation(); });
+        document.getElementById('productModal')?.addEventListener('click', closeModal);
+
+        // Cart logic with details and localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        function updateCartCount() {
+            document.getElementById('cartCount').textContent = cart.reduce((sum, item) => sum + item.qty, 0);
+        }
+        // Order Now logic
+        function addToCart(e, idx) {
+            e.stopPropagation();
+            openOrderInfoModal(idx);
+        }
+
+        // Show order info modal
+        function openOrderInfoModal(idx) {
+            const prod = products[idx];
+            let modal = document.getElementById('orderInfoModal');
+            if (!modal) {
+                modal = document.createElement('div');
+                modal.className = 'modal';
+                modal.id = 'orderInfoModal';
+                modal.innerHTML = `
+                <div class="modal-content" style="max-width:400px;">
+                    <span class="close-modal" onclick="closeOrderInfoModal()" aria-label="Close">&times;</span>
+                    <h2 style="color:#232f3e;">অর্ডার তথ্য</h2>
+                    <div id="orderProductTitle" style="font-weight:bold;margin-bottom:8px;"></div>
+                    <form id="orderInfoForm" onsubmit="submitOrderInfo(event)">
+                        <input type="text" id="orderName" placeholder="আপনার নাম" required style="width:90%;padding:8px;margin-bottom:8px;">
+                        <input type="tel" id="orderPhone" placeholder="মোবাইল নম্বর" required pattern="[0-9]{11}" style="width:90%;padding:8px;margin-bottom:8px;">
+                        <textarea id="orderAddress" placeholder="ঠিকানা" required style="width:90%;height:60px;padding:8px;margin-bottom:8px;"></textarea>
+                        <input type="hidden" id="orderProductIdx">
+                        <button type="submit" style="background:#ff9900;color:#232f3e;border:none;padding:10px 22px;border-radius:6px;font-weight:bold;cursor:pointer;width:100%;">Submit Order</button>
+                    </form>
+                    <div id="orderInfoMsg" style="color:#228B22;margin-top:8px;"></div>
+                </div>
+                `;
+                document.body.appendChild(modal);
+            }
+            document.getElementById('orderProductTitle').textContent = prod.title + ' - ' + prod.price;
+            document.getElementById('orderProductIdx').value = idx;
+            document.getElementById('orderInfoMsg').textContent = '';
+            modal.style.display = 'flex';
+        }
+        function closeOrderInfoModal() {
+            document.getElementById('orderInfoModal').style.display = 'none';
+        }
+        // Handle order info submit
+        function submitOrderInfo(e) {
+            e.preventDefault();
+            const name = document.getElementById('orderName').value.trim();
+            const phone = document.getElementById('orderPhone').value.trim();
+            const address = document.getElementById('orderAddress').value.trim();
+            const idx = document.getElementById('orderProductIdx').value;
+            if (!name || !phone || !address) {
+                document.getElementById('orderInfoMsg').textContent = 'সব তথ্য দিন!';
+                return;
+            }
+            // Save order (demo: localStorage)
+            let orders = JSON.parse(localStorage.getItem('orders')||'[]');
+            orders.push({product: products[idx].title, price: products[idx].price, name, phone, address, time: new Date().toLocaleString()});
+            localStorage.setItem('orders', JSON.stringify(orders));
+            // Hide form, show payment method
+            document.getElementById('orderInfoForm').style.display = 'none';
+            showPaymentMethodSelect(true);
+        // Show payment method selection after order info
+        function showPaymentMethodSelect(reset) {
+            let div = document.getElementById('orderPaymentDiv');
+            if (!div) {
+                div = document.createElement('div');
+                div.id = 'orderPaymentDiv';
+                div.style.marginTop = '16px';
+                document.querySelector('#orderInfoModal .modal-content').appendChild(div);
+            }
+            div.innerHTML = `
+                <h3 style='color:#232f3e;font-size:1.1rem;'>পেমেন্ট মেথড নির্বাচন করুন</h3>
+                <button onclick="selectPayment('bKash')" style="background:#e2136e;color:#fff;margin:6px 8px 6px 0;padding:8px 18px;border:none;border-radius:6px;font-weight:bold;">bKash</button>
+                <button onclick="selectPayment('Nagad')" style="background:#f7941d;color:#fff;margin:6px 8px 6px 0;padding:8px 18px;border:none;border-radius:6px;font-weight:bold;">Nagad</button>
+                <button onclick="selectPayment('Crypto')" style="background:#232f3e;color:#fff;margin:6px 8px 6px 0;padding:8px 18px;border:none;border-radius:6px;font-weight:bold;">Cryptocurrency</button>
+                <button onclick="selectPayment('Binance')" style="background:#f3ba2f;color:#232f3e;margin:6px 0 6px 0;padding:8px 18px;border:none;border-radius:6px;font-weight:bold;">Binance</button>
+                <div id="paymentDetailsMsg" style="margin-top:10px;color:#232f3e;"></div>
+            `;
+            div.style.display = 'block';
+            if (reset) document.getElementById('paymentDetailsMsg').innerHTML = '';
+        }
+
+        // Handle payment method selection
+function selectPayment(method) {
+    let msg = '';
+    if (method === 'bKash') {
+        msg = 'bKash নম্বর: 01XXXXXXXXX<br>পেমেন্ট করুন এবং কনফার্ম করুন।';
+    } else if (method === 'Nagad') {
+        msg = 'Nagad নম্বর: 01XXXXXXXXX<br>পেমেন্ট করুন এবং কনফার্ম করুন।';
+    } else if (method === 'Crypto') {
+        msg = 'Crypto Address: 0x1234abcd...<br>USDT/BTC/ETH গ্রহণযোগ্য।';
+    } else if (method === 'Binance') {
+        msg = 'Binance Pay ID: 123456789<br>Binance App থেকে পেমেন্ট করুন।';
+    }
+    document.getElementById('paymentDetailsMsg').innerHTML = msg + `<br><button onclick="confirmPayment()" style="background:#228B22;color:#fff;margin-top:10px;padding:8px 22px;border:none;border-radius:6px;font-weight:bold;">পেমেন্ট কনফার্ম</button> <button onclick="showPaymentMethodSelect(true)" style="background:#fff;color:#232f3e;margin-left:8px;padding:8px 18px;border:1px solid #232f3e;border-radius:6px;font-weight:bold;">পেমেন্ট মেথড পরিবর্তন</button>`;
+}
+
+        // Payment confirmation
+function confirmPayment() {
+    document.getElementById('paymentDetailsMsg').innerHTML = '<span style="color:#228B22;font-weight:bold;">পেমেন্ট সফলভাবে কনফার্ম হয়েছে!</span>';
+    setTimeout(() => {
+        closeOrderInfoModal();
+        // Reset modal for next order
+        document.getElementById('orderInfoForm').reset();
+        document.getElementById('orderInfoForm').style.display = 'block';
+        let payDiv = document.getElementById('orderPaymentDiv');
+        if (payDiv) payDiv.style.display = 'none';
+    }, 1800);
+}
+        }
+        // Close modal on outside click
+        document.body.addEventListener('click', function(e) {
+            const modal = document.getElementById('orderInfoModal');
+            if (modal && modal.style.display === 'flex' && !modal.querySelector('.modal-content').contains(e.target) && !e.target.closest('.modal-content')) {
+                closeOrderInfoModal();
+            }
+        });
+        function openCartModal(e) {
+            if (e) e.preventDefault();
+            renderCartItems();
+            document.getElementById('cartModal').style.display = 'flex';
+        }
+        function closeCartModal() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+        function renderCartItems() {
+            const cartItemsList = document.getElementById('cartItemsList');
+            if (!cart.length) {
+                cartItemsList.innerHTML = '<div style="color:#b12704;">Your cart is empty.</div>';
+                document.getElementById('cartTotal').textContent = '';
+                return;
+            }
+            let total = 0;
+            cartItemsList.innerHTML = cart.map((item, i) => {
+                const price = parseFloat(item.price.replace('$','')) * item.qty;
+                total += price;
+                return `<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
+                    <span>${item.title} <span style='color:#888;font-size:0.9em;'>(x${item.qty})</span></span>
+                    <span>$${price.toFixed(2)}</span>
+                    <button onclick="removeCartItem(${i})" aria-label="Remove ${item.title} from cart" style="background:#b12704;color:#fff;border:none;padding:2px 8px;border-radius:4px;cursor:pointer;">x</button>
+                </div>`;
+            }).join('');
+            document.getElementById('cartTotal').textContent = 'Total: $' + total.toFixed(2);
+        }
+        function removeCartItem(idx) {
+            cart.splice(idx, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            renderCartItems();
+        }
+        function checkoutCart() {
+            if (!cart.length) {
+                showToast('Cart is empty!');
+                return;
+            }
+        }
+        // Update cart count on load
+        updateCartCount();
+        // Newsletter
+        function subscribeNewsletter(e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletterEmail').value;
+            document.getElementById('newsletterMsg').textContent = '';
+            showToast('Thank you for subscribing, ' + email + '!');
+            document.getElementById('newsletterEmail').value = '';
+        }
+        // Responsive nav close on link click (mobile)
+        document.querySelectorAll('.nav a').forEach(a => {
+            a.addEventListener('click', () => {
+                document.getElementById('mainNav').classList.remove('open');
+            });
+        });
+        // Cart modal close on outside click
+        document.getElementById('cartModal')?.addEventListener('click', closeCartModal);
+        document.getElementById('cartModalContent')?.addEventListener('click', function(e) { e.stopPropagation(); });
+    document.getElementById('accountModal')?.addEventListener('click', closeAccountModal);
+    document.getElementById('accountModalContent')?.addEventListener('click', function(e) { e.stopPropagation(); });
+        // Toast notification
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2000);
+            toast.setAttribute('role', 'alert');
+        }
+        // Product Reviews (localStorage, per product)
+        function renderReviews(idx) {
+            let reviews = JSON.parse(localStorage.getItem('reviews')||'{}');
+            let arr = reviews[idx]||[];
+            document.getElementById('reviewsList').innerHTML = arr.length ? arr.map(r=>`<div style='margin-bottom:4px;'>${r}</div>`).join('') : '<span style="color:#888;">No reviews yet.</span>';
+        }
+        function addReview(e) {
+            e.preventDefault();
+            const idx = document.getElementById('reviewInput').getAttribute('data-idx');
+            const val = document.getElementById('reviewInput').value;
+            let reviews = JSON.parse(localStorage.getItem('reviews')||'{}');
+            if (!reviews[idx]) reviews[idx]=[];
+            reviews[idx].push(val);
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+            document.getElementById('reviewInput').value = '';
+            renderReviews(idx);
+        }
+        // Category filter
+        // ক্যাটাগরি ফিল্টার
+        function filterCategory(event, category) {
+            document.querySelectorAll('.category').forEach(cat => cat.classList.remove('active'));
+            event.target.classList.add('active');
+            const searchText = document.getElementById('searchInput').value;
+            renderProducts(category, searchText);
+        }
+        // সার্চ ফিল্টার
+        function searchProducts() {
+            const activeCat = document.querySelector('.category.active').textContent;
+            const searchText = document.getElementById('searchInput').value;
+            renderProducts(activeCat, searchText);
+        }
+        // Loading spinner logic
+function showSpinner() {
+    document.getElementById('loadingSpinner').style.display = 'flex';
+}
+function hideSpinner() {
+    document.getElementById('loadingSpinner').style.display = 'none';
+}
+// Hero banner image rotation
+const heroImages = [
+  'https://unsplash.com/photos/e080KjvQKGc?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1513708927688-890fe8c7b8c3?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80'
+];
+let heroIndex = 0;
+function rotateHeroImage() {
+  heroIndex = (heroIndex + 1) % heroImages.length;
+  document.querySelector('.hero').style.background = `url('${heroImages[heroIndex]}') center/cover no-repeat, linear-gradient(90deg, #232f3e 60%, #131921 100%)`;
+}
+setInterval(rotateHeroImage, 5000);
+    </script>
+</html>
